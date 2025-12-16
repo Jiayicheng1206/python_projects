@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Python build
+build/
+dist/
+
+# PyInstaller
+*.spec
