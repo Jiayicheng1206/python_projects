@@ -7,3 +7,7 @@ dist/
 
 # PyInstaller
 *.spec
+
+# local files
+demo.txt
+test_file.py
