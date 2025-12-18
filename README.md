@@ -9,11 +9,11 @@
 最前面加#即可，也可以使用快捷键Command + / （下面那个斜线）
 
 ### 多行注释
-‘’‘
+'''
 
 多行文本
 
-’‘’
+'''
 
 ## 字符串与文本处理
 ### 字符串方法
@@ -61,7 +61,7 @@ password = getpass.getpass("please input your password:")
 ```python
 try:
     guess = int(guess_str)
-except ValueError:
+except ValueError: #如果有多个异常检测，写成except (ValueError,IndexError):
     print("请输入有效数字")
     continue
 ```
@@ -94,6 +94,25 @@ for line in lines:
     username, password = line.split(",",1) #最多分割一次
     users[username] = password
 ```
+list()：把一个可遍历的东西，按顺序放进列表
+```python
+name = list(info.keys()) #此处info是个字典，将字典中的姓名取出并存入列表name
+```
+enumerate()可以给集合内的项目编号
+```python
+lst = ["a", "b", "c"]
+
+for i, v in enumerate(lst, start=1): #for 编号，项目 in enumerate（集合， start=几）
+    print(i, v)
+
+```
+可得到结果：
+
+1 a
+
+2 b
+
+3 c
 ## 文件（file）
 ### 打开文件的标准写法
 ```python
@@ -174,4 +193,9 @@ users["tom"] = "newpwd"     # 修改
 for username in users:
     print(username, users[username])
 ```
+把所有key拿出来：
 
+.keys()
+```python
+provinces = list(regions.keys())
+```
