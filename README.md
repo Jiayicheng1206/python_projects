@@ -86,7 +86,9 @@ for循环会创建一个变量，且循环结束后会保留其值
 
 例如“jid”和“jid ”
 
-.lower()可以将字符串转为小写，写到这里想起来了，顺便一提。
+可以只去掉左边或右边的空格，分别为.lstrip .rstrip
+
+.lower()可以将字符串转为小写，写到这里想起来了，顺便一提。反之.upper()
 ```python
 for line in lines:
     if not line.strip(): #strip()可以去掉变量中两头的空格、换行等无效空白字符
